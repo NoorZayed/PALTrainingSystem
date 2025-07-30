@@ -1,0 +1,92 @@
+const fs = require('fs');
+
+// Read the server.ts file
+const serverContent = fs.readFileSync('src/server.ts', 'utf8');
+
+// Split into lines
+const lines = serverContent.split('\n');
+
+// Find all lines with submit-report endpoints
+const submitReportIndices = [];
+lines.forEach((line, index) => {
+  if (line.includes('app.post("/api/supervisor/submit-report"')) {
+    submitReportIndices.push(index);
+  }
+});
+
+console.log('Found submit-report endpoints at lines:', submitReportIndices.map(i => i + 1));
+
+// We'll keep only the first one and remove the rest
+// Find the end of each endpoint (next app. line or end of file)
+
+let resultLines = [...lines];
+let removedCount = 0;
+
+// Remove duplicates from the end to avoid index shifting
+for (let i = submitReportIndices.length - 1; i >= 1; i--) { // Start from 1 to keep the first one
+  const startIndex = submitReportIndices[i];
+  
+  // Find the end of this endpoint (next app. declaration or specific markers)
+  let endIndex = startIndex;
+  for (let j = startIndex + 1; j < lines.length; j++) {
+    if (lines[j].includes('});') && (
+        lines[j+1] && (
+          lines[j+1].includes('app.') || 
+          lines[j+1].includes('// ') ||
+          lines[j+1].includes('//student apply action endpoint')
+        )
+      )) {
+      endIndex = j;
+      break;
+    }
+  }
+  
+  console.log(`Removing duplicate ${i} from line ${startIndex + 1} to ${endIndex + 1}`);
+  resultLines.splice(startIndex, endIndex - startIndex + 1);
+  removedCount++;
+}
+
+// Fix the remaining endpoint to match correct schema
+let foundFirst = false;
+for (let i = 0; i < resultLines.length; i++) {
+  if (resultLines[i].includes('app.post("/api/supervisor/submit-report"') && !foundFirst) {
+    foundFirst = true;
+    console.log('Fixing the remaining endpoint at line', i + 1);
+    
+    // Find the INSERT query and fix it
+    for (let j = i; j < i + 50; j++) {
+      if (resultLines[j] && resultLines[j].includes('INSERT INTO report')) {
+        // Replace with correct schema
+        resultLines[j] = `    INSERT INTO report (`;
+        resultLines[j+1] = `      report_id, student_id, course_subject, internship_type, month, year,`;
+        resultLines[j+2] = `      full_name, supervisor_name, date_from, date_to, time_from, time_to,`;
+        resultLines[j+3] = `      supervisor_comments`;
+        resultLines[j+4] = `    )`;
+        resultLines[j+5] = `    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+        break;
+      }
+    }
+    
+    // Fix the parameters
+    for (let j = i; j < i + 100; j++) {
+      if (resultLines[j] && resultLines[j].includes('const uniqueReportId')) {
+        resultLines[j] = `  const reportId = Math.floor(Math.random() * 1000000);`;
+        break;
+      }
+    }
+    
+    // Remove company_name and submitted_at references
+    for (let j = i; j < i + 100; j++) {
+      if (resultLines[j] && resultLines[j].includes('company_name')) {
+        resultLines.splice(j, 1);
+        j--; // Adjust index after removal
+      }
+    }
+    
+    break;
+  }
+}
+
+// Write the cleaned content back
+fs.writeFileSync('src/server.ts', resultLines.join('\n'));
+console.log(`Cleaned up ${removedCount} duplicate endpoints`);
