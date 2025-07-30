@@ -2,21 +2,6 @@
 
 **Palestine Training System** - A comprehensive internship management platform designed to streamline the internship process for students, companies, supervisors, and training managers.
 
-## � Live Demo
-
-**[🌐 View Live Demo](https://noorzayed.github.io/PALTrainingSystem)**
-
-### Demo Accounts
-Try the system with these demo accounts:
-
-| Role | Email | Password | Access Level |
-|------|-------|----------|--------------|
-| **Student** | demo.student@paltraining.com | demo123 | Student Dashboard, Apply for Internships |
-| **Company** | demo.company@paltraining.com | demo123 | Post Internships, Review Applications |
-| **Supervisor** | demo.supervisor@paltraining.com | demo123 | Monitor Students, Submit Reports |
-| **Admin** | demo.admin@paltraining.com | demo123 | Full System Administration |
-
-*Note: Demo data resets daily. The demo uses mock data for demonstration purposes.*
 
 ## �📋 Table of Contents
 
