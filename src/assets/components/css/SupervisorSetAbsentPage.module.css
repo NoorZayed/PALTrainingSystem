@@ -1,0 +1,484 @@
+/* Clean Supervisor Set Absent Page Styles */
+.container {
+    padding:  .5rem;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #f8fdf9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.abscontent {
+  min-height: 100vh;
+  background-color: #f7f9fb;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1;
+  padding: 1rem 2rem;
+  margin-left: 250px;
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 12px 0 0 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.abscontent h2 {
+  color: #065f46;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+}
+
+.abscontent h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #22c55e;
+  border-radius: 1px;
+}
+
+.errorMessage {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 1.25rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: none;
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #22c55e;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.loadingState::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #22c55e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.absentForm {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.absentForm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #22c55e;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.absentFormRow {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  align-items: end;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.absentFormRow label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.absentFormRow label input[type="date"] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  transition: border-color 0.2s;
+  background: white;
+  min-width: 140px;
+}
+
+.absentFormRow label input[type="date"]:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.1);
+}
+
+.absentSearch {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  width: 200px;
+  transition: border-color 0.2s;
+  background: white;
+}
+
+.absentSearch:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.1);
+}
+
+.absentTableWrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.studentTable {
+  width: 100%;
+  max-width: none;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.studentTable th {
+  background: #f9fafb;
+  padding: 0.875rem 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.studentTable td {
+  padding: 0.875rem 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+  vertical-align: middle;
+  text-align: center;
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.studentTable tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.absentRow {
+  background-color: #fef3c7 !important;
+}
+
+.absentHighCountRow {
+  background-color: #fee2e2 !important;
+}
+
+.absentStatus {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: #ef4444;
+  color: white;
+  text-transform: uppercase;
+}
+
+.presentStatus {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background-color: #22c55e;
+  color: white;
+  text-transform: uppercase;
+}
+
+.absentHighCount {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.absentNoStudents {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  padding: 2rem;
+  font-size: 0.875rem;
+}
+
+.absentReasonInput {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: border-color 0.2s;
+}
+
+.absentReasonInput:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.1);
+}
+
+.absentReasonInput:disabled {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+.absentHistoryBtn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.absentHistoryBtn:hover {
+  background-color: #2563eb;
+}
+
+.actionButton {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  margin: 1rem auto;
+  display: block;
+}
+
+.actionButton::before {
+  display: none;
+}
+
+.actionButton:hover::before {
+  display: none;
+}
+
+.actionButton:hover {
+  background-color: #16a34a;
+}
+
+.absentSuccessToast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.absentSuccessToast::before {
+  content: "✓";
+  font-weight: bold;
+}
+
+.absentHistoryModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.absentHistoryModalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.absentHistoryModalContent h3 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.absentHistoryTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.absentHistoryTable th,
+.absentHistoryTable td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.absentHistoryTable th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .abscontent {
+    margin-left: 0;
+    padding: 1rem;
+  }
+  
+  .absentFormRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .absentSearch {
+    width: 100%;
+  }
+  
+  .studentTable {
+    font-size: 0.875rem;
+  }
+  
+  .studentTable th,
+  .studentTable td {
+    padding: 0.5rem;
+  }
+}
+
+/* Absent no reason indicator */
+.absentNoReason {
+  color: #888;
+  font-style: italic;
+}
+
+/* Custom checkbox styling */
+.studentTable input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #22c55e;
+  cursor: pointer;
+}
+
+.studentTable input[type="checkbox"]:checked {
+  transform: none;
+}
+
+.studentTable input[type="checkbox"]:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Improved table responsiveness */
+@media (max-width: 1024px) {
+  .abscontent {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .absentTableWrapper {
+    overflow-x: scroll;
+  }
+  
+  .studentTable {
+    min-width: 600px;
+  }
+  
+  .absentHistoryModalContent {
+    width: 95%;
+    padding: 1rem;
+    max-height: 80vh;
+  }
+  
+  .absentFormRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .absentFormRow label input[type="date"] {
+    width: 100%;
+  }
+}

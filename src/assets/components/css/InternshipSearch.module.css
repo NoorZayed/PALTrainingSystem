@@ -1,0 +1,571 @@
+/* InternshipSearch.module.css */
+.container {
+  display: flex;
+   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh; /* Ensure full height */
+}
+
+.mainContent {
+  flex: 1;
+  padding: 30px;
+}
+
+.searchBar {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.searchBar h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.searchBar p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.inputs {
+  display: flex;
+  gap: 15px;
+}
+
+.inputs input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.searchBtn {
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.searchBtn:hover {
+  background-color: #f57c00;
+}
+
+.resultsSection {
+  display: flex;
+  gap: 30px;
+}
+/*  (Filter Section Part) */
+.filterSection {
+  width: 300px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+  position: sticky;
+  top: 30px;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.filterHeader h2 {
+  font-size: 20px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.clearBtn:hover {
+  background-color: #f0f7ff;
+  color: #2b6cb0;
+}
+
+/* Recommended Filter */
+.recommendedFilter {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.recommendedFilter:hover {
+  border-color: #4a90e2;
+  background: #f0f7ff;
+}
+
+.recommendedLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #2d3748;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  font-size: 14px;
+}
+
+.recommendedLabel input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #4a90e2;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.recommendedIcon {
+  font-size: 16px;
+  color: #4a90e2;
+}
+
+/* Filter Groups */
+.filterGroup {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.filterGroup:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filterGroup h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.filterGroup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filterGroup li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.filterGroup input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.filterGroup label {
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.filterGroup label:hover {
+  color: #3498db;
+}
+
+/* No results message */
+.noResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.noResults p {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.resetButton {
+  padding: 0.5rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.resetButton:hover {
+  background-color: #2980b9;
+}
+
+/* Existing view details button improvements */
+.viewDetailsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #f0f4f8;
+  color: #2c3e50;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.viewDetailsButton:hover {
+  background-color: #e2e8f0;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.applyBtn {
+  flex: 2;
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.applyBtn:hover {
+  background-color: #2980b9;
+}
+
+.applyBtn:disabled {
+  background-color: #a3c9e9;
+  cursor: default;
+}
+
+.results {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header h2 {
+  font-size: 22px;
+  color: #333;
+}
+
+.header select {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+
+
+/* InternshipCard.module.css */
+
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card h2 { /* Change h3 to h2 */
+  font-size: 16px; /* Adjust font size */
+  margin-bottom: 8px; /* Adjust margin */
+}
+.indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.companyIcon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  fill: #777;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.buttonsContainer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.viewDetailsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background-color: #f0f4f8;
+  color: #2c3e50;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.viewDetailsButton:hover {
+  background-color: #e2e8f0;
+}
+
+.viewDetailsButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+.applyBtn {
+  flex: 2;
+  padding: 8px 15px;
+  background-color: #ef9036;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.applyBtn:hover {
+  background-color: #2980b9;
+}
+
+.applyBtn:disabled {
+  background-color: #a3c9e9;
+  cursor: default;
+}
+
+.statusMessage {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #2ecc71;
+  text-align: center;
+}
+
+.saveBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+.saveIcon {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.3s ease; /* Use filter for color change */
+}
+
+.saveBtn:hover .saveIcon,
+.saveBtn.saved .saveIcon {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); /* Green filter */
+}
+
+.saved .saveIcon {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); /* Green filter */
+}
+
+.saveBtn.saved:hover .saveIcon {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+/* Pagination.module.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pagination button,
+.pagination span {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button {
+  background-color: #f0f0f0;
+}
+
+.pagination button:hover {
+  background-color: #e0e0e0;
+}
+
+.pagination span {
+  background-color: white;
+}
+
+.recommendedFilter {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.recommendedLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  color: #495057;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.recommendedLabel input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4a90e2;
+  cursor: pointer;
+}
+
+.recommendedIcon {
+  font-size: 1.1rem;
+  color: #4a90e2;
+}
+
+.recommendedLabel:hover {
+  color: #4a90e2;
+}
+
+/* Add a subtle animation when the filter is active */
+.recommendedFilter:has(input:checked) {
+  background: #e3f2fd;
+  border-color: #4a90e2;
+}
+
+@media (max-width: 768px) {
+  .recommendedFilter {
+    margin: 1rem 0;
+  }
+}
+
+.card.recommended {
+  border-color: #4a90e2;
+  background-color: #f8f9fa;
+}
+
+.recommendedIndicator {
+  background-color: #4a90e2;
+}
+
+.recommendedBadge {
+  margin-left: auto;
+  padding: 4px 8px;
+  background-color: #e3f2fd;
+  color: #4a90e2;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.recommendedBadge::before {
+  content: '🔎';
+  font-size: 12px;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0;
+}

@@ -1,0 +1,87 @@
+/* New styles for enhanced CompanyRequests component */
+
+/* Match percentage styling */
+.matchPercentage {
+  font-weight: 600;
+  color: #0984e3;
+  background-color: #e3f2fd;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.matchInfo {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #4b5563;
+  margin-left: 0.5rem;
+}
+
+/* Modal footer styling */
+.modalFooter {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.showMoreButton {
+  background-color: #0984e3;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(9, 132, 227, 0.2);
+}
+
+.showMoreButton:hover {
+  background-color: #0069d9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(9, 132, 227, 0.3);
+}
+
+/* Improve status badges */
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.accepted {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.rejected {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+/* Enhancement for CV modal */
+.cvModalSmall {
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f8fafc;
+}
+
+.cvModalSmall::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cvModalSmall::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.cvModalSmall::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 3px;
+}

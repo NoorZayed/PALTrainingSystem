@@ -1,0 +1,102 @@
+/* src/css/studentRequestPage.module.css */
+.requestPageContainer {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .mainContent {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .internshipRequests {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .requestItem {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .pending {
+    background-color: #ffe0b2;
+    color: #ff9800;
+  }
+  
+  .accepted {
+    background-color: #c8e6c9;
+    color: #4caf50;
+  }
+  
+  .rejected {
+    background-color: #ffcdd2;
+    color: #f44336;
+  }
+  
+  .filterControls {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 5px;
+  }
+  
+  .filterButton {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #6bb172;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filterButton.active,
+  .filterButton:hover {
+    background-color: #e99458;
+  }
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    gap: 12px; 
+}
+
+.cancelBtn {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cancelBtn:hover {
+  background-color: #d9363e;
+}
+
+.confirmBtn {
+  background-color: #3f8459; 
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirmBtn:hover {
+  background-color: #155c2f; 
+}
+

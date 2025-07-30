@@ -1,0 +1,106 @@
+/* EditCompanyProfile.module.css */
+.editContainer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .backButton {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 15px;
+  }
+  
+  .backButton:hover {
+    text-decoration: underline;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .editForm {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .formGroup input[type="text"],
+  .formGroup input[type="email"],
+  .formGroup input[type="tel"],
+  .formGroup input[type="url"],
+  .formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .formGroup textarea {
+    min-height: 120px;
+  }
+  
+  .buttonGroup {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+  
+  .saveButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .saveButton:hover {
+    background-color: #1e7e34;
+  }
+  
+  .cancelButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .cancelButton:hover {
+    background-color: #c82333;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }

@@ -1,0 +1,97 @@
+.footer {
+  background-color: #98dab7d8; 
+  padding: 40px 20px;
+  text-align: left;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left, .footer-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-left .logo img {
+  margin-right: 5px; /* Reduced margin */
+  width: 80px; /* Adjusted logo size */
+  height: auto;
+}
+
+.footer-left .logo h3 {
+  font-size: 1.4em; /* Adjusted font size */
+  margin-left: 5px; /* Reduced margin */
+  font-weight: 600; /* Increased font weight */
+  color: #333;
+}
+
+.footer-left p {
+  margin-bottom: 8px; /* Adjusted margin */
+  color: #555;
+  font-size: 14px;
+}
+
+.footer-right h3 {
+  margin-bottom: 15px; /* Adjusted margin */
+  color: #333;
+  font-weight: 600;
+}
+
+.contact-info {
+  margin-top: 5px;
+  text-align: left;
+}
+
+.contact-info p {
+  margin-bottom: 3px;
+  color: #555;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.footer-right a {
+  display: block;
+  margin-bottom: 8px; /* Adjusted margin */
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  padding: 5px 0; /* Added padding */
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px; /* Adjusted margin */
+  padding-top: 20px; /* Added padding */
+  font-size: 0.9em;
+  color: #777;
+  border-top: 1px solid #0c0c0c5e; /* Added a divider */
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+  .footer-left, .footer-right {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+}

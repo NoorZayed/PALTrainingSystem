@@ -1,0 +1,232 @@
+
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    password VARCHAR(100),
+    role VARCHAR(50)
+);
+
+
+
+INSERT INTO users (id, name, email, password, role) VALUES
+(1210047, 'Mohammad Issa', 'mohammad@gmail.com', 'mo1210047', 'student'),
+(1210264, 'Nour Zayed', 'nour@hotmail.com', 'nour1234', 'student'),
+(1211543, 'Furat Madi', 'furat@gmail.com', 'furat1211543', 'student'),
+(1, 'pita', 'info@pita.ps', 'pita2025', 'company');
+
+
+
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    second_name VARCHAR(50),
+    email VARCHAR(100),
+    password VARCHAR(100),
+    location VARCHAR(100),
+    phone VARCHAR(20),
+    sex VARCHAR(10),
+    application_status VARCHAR(50),
+    internshipApplications TEXT,
+    major VARCHAR(100),
+    interests TEXT,
+    profile_image VARCHAR(100),
+    skills TEXT,
+    about TEXT
+);
+
+
+
+INSERT INTO students (
+    student_id, first_name, second_name, email, password, location, phone, sex,
+    application_status, internshipApplications, major, interests, profile_image, skills, about
+) VALUES
+(1210047, 'Mohammad', 'Issa', 'mohammad@gmail.com', 'mo1210047', 'Al-quds', '0599262251', 'male',
+ 'Pending', '["Internship A", "Internship B"]', 'Computer Science', '["Web Development", "AI", "Mobile Apps"]',
+ 'mohammad_profile.jpg', '["React", "Node.js", "Python", "MySQL"]',
+ 'Mohammad is a third-year CS student from Al-Quds p...'),
+(1210264, 'Nour', 'Zayed', 'nour@hotmail.com', 'nour1234', 'Ramallah', '0591234567', 'female',
+ 'Accepted', '["ASAL Frontend Internship"]', 'Computer Engineering', '["UI/UX", "Frontend", "Data Visualization"]',
+ 'nour_profile.jpg', '["HTML", "CSS", "Figma", "JavaScript", "React"]',
+ 'Nour is a creative CE student who loves UI/UX desi...'),
+(1211543, 'Furat', 'Madi', 'furat@gmail.com', 'furat0123', 'Ramallah', '+970599032183', 'female',
+ 'Pending', '["SuperStar", "Dimensions"]', 'Computer Science', '["Technology"]',
+ NULL, '["JavaScript","Node.js","React","Java"]',
+ 'im looking for a suitable internship.');
+
+
+
+CREATE TABLE contact_messages (
+    message_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    email VARCHAR(100),
+    phone_number VARCHAR(20),
+    message TEXT,
+    submitted_at DATETIME
+);
+
+
+
+INSERT INTO contact_messages (message_id, first_name, last_name, email, phone_number, message, submitted_at) VALUES
+(1, 'furat', 'madi', 'furatm@yahoo.com', '0599032183', 'i like this website!', '2025-03-16 20:45:47');
+
+
+
+CREATE TABLE application (
+    applicationID INT PRIMARY KEY AUTO_INCREMENT,
+    studentID INT,
+    internshipID INT,
+    submissionDate DATE,
+    status VARCHAR(50),
+    feedback TEXT
+);
+
+
+
+CREATE TABLE report (
+    report_id INT PRIMARY KEY,
+    student_id INT,
+    course_subject VARCHAR(100),
+    internship_type VARCHAR(50),
+    month VARCHAR(10),
+    year INT,
+    full_name VARCHAR(100),
+    supervisor_name VARCHAR(100),
+    date_from DATE,
+    date_to DATE,
+    time_from TIME,
+    time_to TIME,
+    supervisor_comments TEXT
+);
+
+
+
+INSERT INTO report (
+    report_id, student_id, course_subject, internship_type, month, year, full_name,
+    supervisor_name, date_from, date_to, time_from, time_to, supervisor_comments
+) VALUES
+(2, 1211543, 'Advance Java', 'On-Site', 'Jan', 2023, 'furat madi',
+NULL, '2025-03-25', '2025-03-28', '08:20:00', '14:20:00', 'many tasks achieved');
+
+//14/8/2025 added tables:
+
+CREATE TABLE internship (
+    internship_id INT PRIMARY KEY AUTO_INCREMENT
+);
+
+CREATE TABLE company (
+    company_id INT PRIMARY KEY AUTO_INCREMENT,
+    company_name VARCHAR(100) NOT NULL,
+    registration_number VARCHAR(50) UNIQUE NOT NULL,
+    contact_person VARCHAR(100),
+    website VARCHAR(255) CHECK (website LIKE 'http:/%' OR website LIKE 'https:/%'),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    phone_number VARCHAR(20),
+    location VARCHAR(150),
+    about TEXT,
+    industry VARCHAR(100),
+    profile_image VARCHAR(255),
+    reviews TEXT,
+    internship_id INT,
+    FOREIGN KEY (internship_id) REFERENCES internship(internship_id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
+);
+INSERT INTO company (
+    company_id,
+    company_name,
+    registration_number,
+    contact_person,
+    website,
+    email,
+    password,
+    phone_number,
+    location,
+    about,
+    industry,
+    profile_image,
+    reviews,
+    internship_id
+) VALUES (
+    1,
+    'pita',
+    'REG-PA-2025-00123',
+    NULL,
+    'https://www.pita.ps/en',
+    'info@pita.ps',
+    'pita2025',
+    '+97022958447',
+    'Ramallah',
+    'PITA is the voice of the information, communication, technology and startup companies in Palestine. Our reach is global, and we invite you to connect with our community. Come discover the world of opportunities awaiting you in Palestine today.',
+    'full-stack',
+    'pita.jpg',
+    NULL,
+    NULL
+);
+
+//3/5/2025 changes
+ALTER TABLE company DROP FOREIGN KEY company_ibfk_1;
+ALTER TABLE company DROP COLUMN internship_id;
+
+ALTER TABLE students
+ADD COLUMN saved_internships JSON DEFAULT '[]';
+
+INSERT INTO company (
+  company_id, company_name, registration_number, contact_person, website,
+  email, password, phone_number, location, about, industry, profile_image, reviews
+) VALUES
+(2, 'Exalt Technologies', 'REG-PA-2025-0002', 'Ahmad T.', 'https://www.exalt.ps', 
+ 'info@exalt.ps', 'exalt2025', '+97022974500', 'Ramallah',
+ 'Exalt Technologies Ltd. is a leading Palestinian software company delivering global-quality IT solutions.',
+ 'Software Development', 'exalt.jpg', NULL),
+
+(3, 'ASAL Technologies', 'REG-PA-2025-0003', 'Reem K.', 'https://www.asaltech.com', 
+ 'contact@asaltech.com', 'asal2025', '+97022987080', 'Ramallah',
+ 'ASAL is the largest IT services outsourcing company in Palestine, partnering with global clients.',
+ 'Software Outsourcing', 'asal.jpg', NULL),
+
+
+(4, 'Unit One Group', 'REG-PA-2025-0004', 'Sami J.', 'https://www.unitone.org', 
+ 'info@unitone.org', 'unit2025', '+97082246222', 'Gaza',
+ 'Unit One provides IT and Business Process Outsourcing services for local and global markets.',
+ 'IT Services', 'unitone.jpg', NULL),
+
+
+(5, 'Dimensions Tech', 'REG-PA-2025-0005', 'Yara A.', 'https://dimensions.ps', 
+ 'hello@dimensions.ps', 'dimensions2025', '+97022984115', 'Ramallah',
+ 'Dimensions offers web/mobile design and development with a focus on innovation and UX.',
+ 'Web & Mobile Development', 'dimensions.jpg', NULL),
+
+-- 5. iConnect Tech
+(6, 'iConnect Tech', 'REG-PA-2025-0006', 'Hussein D.', 'https://iconnect.ps', 
+ 'admin@iconnect.ps', 'iconnect2025', '+97022955544', 'Hebron',
+ 'iConnect provides enterprise software development and ICT training for youth.',
+ 'Enterprise Solutions', 'iconnect.jpg', NULL);
+
+INSERT INTO users (id, name, email, password, role) VALUES
+(2, 'Exalt Technologies', 'info@exalt.ps', 'exalt2025', 'company'),
+(3, 'ASAL Technologies', 'contact@asaltech.com', 'asal2025', 'company'),
+(4, 'Unit One Group', 'info@unitone.org', 'unit2025', 'company'),
+(5, 'Dimensions Tech', 'hello@dimensions.ps', 'dimensions2025', 'company'),
+(6, 'iConnect Tech', 'admin@iconnect.ps', 'iconnect2025', 'company');
+
+CREATE TABLE internship (
+  internship_id INT AUTO_INCREMENT PRIMARY KEY,
+  student_id INT NOT NULL,
+  industry VARCHAR(255),
+  status VARCHAR(50),
+  company_id INT,
+  FOREIGN KEY (student_id) REFERENCES students(student_id),
+  FOREIGN KEY (company_id) REFERENCES company(company_id)
+);
+
+INSERT INTO internship (student_id, industry, status, company_id) VALUES
+(1211543, 'Mobile app development', 'pending', 1),
+(1211543, 'Frontend Web Development', 'rejected', 3),
+(1211543, 'UI/UX Design', 'accepted', 5),
+(1211543, 'Java Backend Development', 'pending', 6);
+
+
+

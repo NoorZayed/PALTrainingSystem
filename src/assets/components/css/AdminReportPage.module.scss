@@ -1,0 +1,515 @@
+/* AdminReportPage.module.scss */
+.page {
+  display: flex;
+  flex-direction: row;
+  padding: 0; /* Remove extra padding */
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  min-height: 100vh;
+}
+
+.page > .Aside {
+  flex-shrink: 0;
+  margin: 0; /* Remove spacing */
+}
+
+.mainContent {
+  flex-grow: 1;
+  padding: 2rem;
+  margin-left: 0; /* Ensure no spacing between aside and main content */
+  gap: 2rem;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  h1 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    }
+  }
+}
+
+.reportsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.reportCard {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 123, 255, 0.1);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00bcd4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &__content {
+    cursor: pointer;
+    flex-grow: 1;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background-color: #f1f5f9;
+    }
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      color: #1a365d;
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      color: #4a5568;
+      font-size: 0.95rem;
+      line-height: 1.5;
+
+      strong {
+        font-weight: 600;
+        color: #2d3748;
+      }
+    }
+  }
+
+  &__actions {
+    margin-top: auto;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    padding-top: 1rem;
+    border-top: 1px solid #edf2f7;
+    flex-wrap: wrap;
+
+    button {
+      padding: 0.6rem 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      min-width: 95px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      &:first-child {
+        background-color: #17a2b8;
+        color: white;
+        &:hover {
+          background-color: #138496;
+          box-shadow: 0 4px 12px rgba(23, 162, 184, 0.2);
+        }
+      }
+
+      &:nth-child(2) {
+        background-color: #007bff;
+        color: white;
+        &:hover {
+          background-color: #0056b3;
+          box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+        }
+      }
+
+      &:nth-child(3) {
+        background-color: #dc3545;
+        color: white;
+        &:hover {
+          background-color: #c82333;
+          box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+        }
+      }
+
+      &:nth-child(4) {
+        background-color: #6c757d;
+        color: white;
+        &:hover {
+          background-color: #5a6268;
+          box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+        }
+
+        &.published {
+          background-color: #28a745;
+          &:hover {
+            background-color: #218838;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+.studentsTable__container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.studentsTable {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #edf2f7;
+    flex-wrap: wrap; /* Allow header to adjust for smaller screens */
+    gap: 1rem;
+
+    h3 {
+      margin: 0;
+      color: #2c3e50;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .closeButton {
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #5a6268;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem; /* Reduce font size for smaller screens */
+    min-width: 800px; /* Ensure table doesn't shrink too much */
+
+    thead {
+      background-color: #f8fafc;
+      border-bottom: 2px solid #edf2f7;
+    }
+
+    th,
+    td {
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      border-bottom: 1px solid #edf2f7;
+      padding: 0.75rem; /* Reduce padding for smaller cells */
+    }
+
+    th {
+      font-weight: 600;
+      color: #4a5568;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      letter-spacing: 0.05em;
+    }
+
+    tbody tr {
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #f8fafc;
+      }
+
+      &:nth-child(even) {
+        background-color: #f8fafc;
+      }
+    }
+
+    button {
+      padding: 0.625rem 1.25rem;
+      margin-right: 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      min-width: 120px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+
+      &:first-child {
+        background-color: #28a745;
+        color: white;
+        &:hover {
+          background-color: #218838;
+          box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
+        }
+      }
+
+      &.viewDetailsButton {
+        background-color: #17a2b8;
+        color: white;
+        &:hover {
+          background-color: #138496;
+          box-shadow: 0 4px 12px rgba(23, 162, 184, 0.2);
+        }
+      }
+    }
+
+    td:last-child {
+      padding-right: 2rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.6;
+    color: #4a5568;
+
+    strong {
+      color: #2c3e50;
+      font-weight: 600;
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    }
+  }
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  label {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      background-color: white;
+      box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.1);
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.modal__buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  button {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    &:first-child {
+      background-color: #007bff;
+      color: white;
+      &:hover {
+        background-color: #0056b3;
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+      }
+    }
+
+    &:last-child {
+      background-color: #6c757d;
+      color: white;
+      &:hover {
+        background-color: #5a6268;
+        box-shadow: 0 4px 12px rgba(108, 117, 125, 0.2);
+      }
+    }
+  }
+}
+
+.reportDetails {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+
+  p {
+    margin: 1rem 0;
+    padding: 0.75rem;
+    border-bottom: 1px solid #edf2f7;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    strong {
+      display: inline-block;
+      width: 180px;
+      color: #2c3e50;
+      font-weight: 600;
+    }
+  }
+}

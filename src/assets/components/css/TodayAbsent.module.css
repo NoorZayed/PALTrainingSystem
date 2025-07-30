@@ -1,0 +1,68 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h4 {
+  color: #2d3436;
+  margin: 0 0 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.item:hover {
+  background: #f1f2f6;
+  transform: translateY(-1px);
+}
+
+.details {
+  flex: 1;
+}
+
+.details h5 {
+  color: #2d3436;
+  margin: 0 0 0.3rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.details p {
+  color: #636e72;
+  margin: 0 0 0.3rem 0;
+  font-size: 0.85rem;
+}
+
+.details span {
+  color: #b2bec3;
+  font-size: 0.8rem;
+}
+
+.status {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.approved {
+  background: #e3fcef;
+  color: #00b894;
+}
+
+.pending {
+  background: #fff3e0;
+  color: #f39c12;
+}
+  

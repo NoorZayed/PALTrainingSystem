@@ -1,0 +1,139 @@
+/* EditStudentProfile.module.css */
+.editContainer {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .backButton {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 15px;
+  }
+  
+  .backButton:hover {
+    text-decoration: underline;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .editForm {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #343a40;
+  }
+  
+  .formGroup input[type="text"],
+  .formGroup input[type="email"],
+  .formGroup input[type="tel"],
+  .formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .formGroup textarea {
+    min-height: 120px;
+  }
+  
+  .formGroup > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .formGroup input[type="text"][placeholder] {
+    flex-grow: 1;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .removeTag {
+    background: none;
+    border: none;
+    color: #d32f2f;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 0.8rem;
+  }
+  
+  .removeTag:hover {
+    color: #b71c1c;
+  }
+  
+  .buttonGroup {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+  
+  .saveButton {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .saveButton:hover {
+    background-color: #1e7e34;
+  }
+  
+  .cancelButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .cancelButton:hover {
+    background-color: #c82333;
+  }
+  
+  .icon {
+    margin-right: 8px;
+  }

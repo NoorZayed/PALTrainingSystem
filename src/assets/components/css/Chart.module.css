@@ -1,0 +1,122 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h4 {
+  color: #2d3436;
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.chartContainer {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  height: 250px;
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #0984e3;
+  animation: spin 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error State */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(231, 76, 60, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.errorIcon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.retryButton {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.retryButton:hover {
+  background-color: #0772c6;
+}
+
+/* Chart.js specific styles */
+:global(.chartjs-render-monitor) {
+  animation: none !important;
+}
+
+:global(.chartjs-tooltip) {
+  background: rgba(0, 0, 0, 0.8) !important;
+  border-radius: 4px !important;
+  padding: 0.5rem !important;
+  font-size: 0.8rem !important;
+}
+
+:global(.chartjs-legend) {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 1rem !important;
+  margin-top: 0.5rem !important;
+  font-size: 0.8rem !important;
+}
+
+:global(.chartjs-legend-item) {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+:global(.chartjs-legend-marker) {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 2px !important;
+}

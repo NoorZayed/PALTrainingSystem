@@ -1,0 +1,108 @@
+.card {
+
+    background-color: #fff;
+  
+    border-radius: 8px;
+  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+    padding: 20px;
+  
+    margin-bottom: 20px;
+  
+  }
+.card h4 {
+  
+    font-size: 1.2rem;
+  
+    margin-bottom: 20px;
+  
+    color: #333;
+  
+  }
+  .stats {
+  
+    display: flex;
+  
+    justify-content: space-around;
+  
+    margin-bottom: 20px;
+  
+  }
+  .total,.overdue {
+  
+    text-align: center;
+  
+  }
+  .total p,.overdue p {
+  
+    font-size: 0.9rem;
+  
+    color: #777;
+  
+    margin-bottom: 5px;
+  
+  }
+  .total h3,.overdue h3 {
+  
+    font-size: 1.5rem;
+  
+    color: #333;
+  
+    margin: 0;
+  
+  }
+  .ringChart {
+  
+    position: relative;
+  
+    width: 150px;
+  
+    height: 150px;
+  
+    border-radius: 50%;
+  
+    background: conic-gradient(#f57c00 70%, #eee 0);
+  
+    margin: 20px auto;
+  
+    display: flex;
+  
+    align-items: center;
+  
+    justify-content: center;
+  
+  }
+  .centerText {
+  
+    position: absolute;
+  
+    text-align: center;
+  
+    font-size: 1rem;
+  
+    font-weight: bold;
+  
+    color: #333;
+  
+  }
+  .taskBreakdown {
+  
+    list-style: none;
+  
+    padding: 0;
+  
+    margin: 20px 0 0;
+  
+  }
+  .taskBreakdown li {
+  
+    font-size: 0.9rem;
+  
+    color: #555;
+  
+    padding: 8px 0;
+  
+    border-bottom: 1px solid #eee;
+  
+  }

@@ -1,0 +1,88 @@
+/* Navbar styles */
+.navbar {
+    background-color: #ffffff; 
+    padding: 10px 5px; /* Reduced padding for a more compact look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between left and right sections */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Center the container */
+    margin: 0 auto; /* Center alignment */
+    justify-content: space-between; /* Distribute space between left, center, and right */
+}
+
+.left-section {
+    display: flex;
+    align-items: center; /* Center logo and brand vertically */
+}
+
+.navbar-logo {
+    width: 120px; /* Adjusted width */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.navbar-brand {
+    color: #244330; /* Brand color */
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px; /* Space between logo and text */
+}
+
+.center-section {
+    flex-grow: 1; /* Allow center section to take up remaining space */
+    display: flex;
+    justify-content: center; /* Center the links */
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Remove default margin */
+}
+
+.navbar-nav li {
+    margin: 0 10px; /* Adjusted space between nav items */
+}
+
+.navbar-nav a {
+    color: #48a158; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px;
+    padding: 10px; /* Added padding for a button-like feel */
+    transition: background 0.3s, color 0.3s; /* Smooth transition */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.navbar-nav a:hover {
+    background-color: #345e52; /* Darker background on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+/* Button styles */
+.right-section {
+    display: flex; /* Align buttons in a row */
+    align-items: center; /* Center buttons vertically */
+}
+
+.button {
+    background-color: #1f713b; /* Button background */
+    color: #ffffff; /* Button text color */
+    padding: 10px 15px; /* Adjusted padding */
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s; /* Smooth transition */
+    text-decoration: none; /* Remove underline */
+    margin-left: 10px; /* Space between buttons */
+}
+
+.button:hover {
+    background-color: #34db6c; /* Lighter color on hover */
+}

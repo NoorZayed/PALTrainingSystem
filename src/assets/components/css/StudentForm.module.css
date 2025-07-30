@@ -1,0 +1,137 @@
+/* General Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #b3e5fc);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #37474f;
+    padding: 20px;
+  }
+  
+  /* Profile Form Container */
+  .profileForm,
+  .profileSuccess {
+    width: 550px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profileForm:hover,
+  .profileSuccess:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #00796b;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  /* Form Group Styling */
+  .formGroup {
+    margin-bottom: 25px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1.05em;
+    font-weight: 500;
+  }
+  
+  /* Input Fields */
+  .input,
+  textarea.input,
+  select.input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #cce0e5;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #37474f;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .input:focus,
+  textarea.input:focus,
+  select.input:focus {
+    border-color: #00796b;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 121, 107, 0.2);
+  }
+  
+  textarea.input {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  /* Phone Input Styling */
+  .react-phone-number-input__input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #cce0e5;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #37474f;
+  }
+  
+  .react-phone-number-input__input:focus {
+    border-color: #00796b;
+    box-shadow: 0 4px 8px rgba(0, 121, 107, 0.2);
+  }
+  
+  /* Error Messages */
+  .error {
+    color: #d32f2f;
+    margin-top: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+  
+  /* Submit Button */
+  .submitButton {
+    width: 100%;
+    padding: 16px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submitButton:hover {
+    background-color: #005f56;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+  
+  .submitButton:disabled {
+    background-color: #b2dfdb;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  /* Success Message Styling */
+  .profileSuccess {
+    text-align: center;
+  }
+  
+  .profileSuccess p {
+    font-size: 1.1em;
+    color: #00796b;
+    margin-top: 10px;
+  }
+  

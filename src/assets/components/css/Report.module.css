@@ -1,0 +1,228 @@
+/* src/components/Report.module.css */
+/* src/css/Report.module.css */
+
+.reportPageContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+}
+
+.reportContent {
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.reportTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.reportTable th, .reportTable td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.reportTable th {
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+}
+
+.reportTable tr:hover {
+  background-color: #f9f9f9;
+}
+
+.viewButton {
+  padding: 0.5rem 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.viewButton:hover {
+  background-color: #45a049;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+  background-color: rgba(243, 121, 99, 0.588);
+}
+
+.reportForm {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.saveButton {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.saveButton:hover {
+  background-color: #0056b3;
+}
+
+/* ========================================================================== */
+
+.reportPageContainer2 {
+  display: flex;
+  min-height: 80vh;
+  padding: 15px;
+}
+
+.reportDetails {
+  flex: 1;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 80%; /* Percentage width */
+  margin: 0 auto;
+  justify-content: center;
+}
+.reportDetails h1 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formSection {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.formSection h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.formSection label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 600;
+}
+
+.formSection input,
+.formSection select,
+.formSection textarea {
+  width: calc(100% - 22px);
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+.formSection input:focus,
+.formSection select:focus,
+.formSection textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.formSection textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+.reportDetails button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+.reportDetails button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reportContent {
+      padding: 20px;
+  }
+}

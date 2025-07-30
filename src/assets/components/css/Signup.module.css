@@ -1,0 +1,308 @@
+/* Signup.module.css */
+
+.signupContainer {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb;}
+
+.signupSidebar {
+  width: 40%;
+  max-width: 700px;
+  background-image: url("../../components/images/signup.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 3rem; /* Increased padding */
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.signupLogo {
+  margin-bottom: 2.5rem; /* Increased margin */
+  padding: 3rem;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+
+}
+.stepIndicator {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+.signupFormContainer {
+  flex-grow: 1;
+  padding: 4rem; /* Increased padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepContainer {
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  padding: 40px; /* Increased padding */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  border-radius: 12px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.stepContainer:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 2rem; /* Increased heading size */
+  font-weight: 700; /* Bolder font weight */
+  color: #2d3748;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.5px; /* Slight letter spacing adjustment */
+}
+
+p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #4a5568; /* Darker paragraph color */
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Increased gap */
+  margin-bottom: 2rem;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 1rem 2rem; /* Increased padding */
+  border: none;
+  border-radius: 0.75rem; /* More rounded corners */
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 140px; /* Increased min width */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;}
+
+.primaryBtn {
+  background-color: #10b981;
+  color: white;
+  font-size: 18px;
+}
+
+.primaryBtn:hover {
+  background-color: #059669; /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
+.secondaryBtn {
+  background-color: #e5e7eb;
+  color: #374151;
+  font-size: 18px;
+}
+
+.secondaryBtn:hover {
+  background-color: #d1d5db; /* Darker gray on hover */
+  transform: translateY(-2px);
+}
+.topBackButton {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.bottomButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #4a5568;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem; /* Increased label size */
+  font-weight: 600; /* Bolder label font */
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+input,
+select {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 1rem; /* Increased padding */
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+form button {
+  width: 100%;
+  padding: 1rem 2rem; /* Increased padding */
+  background-color: #10b981;
+  color: white;
+  border-radius: 0.75rem; /* More rounded corners */
+  font-weight: 600;
+  margin-top: 2.5rem; /* Increased margin */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #059669; /* Darker green on hover */
+  transform: translateY(-2px);
+}
+
+
+.navigationButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+}
+
+.navigationButtons button {
+  min-width: 120px;
+}
+.successWindow,
+.failureWindow {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px 30px;
+  border: 2px solid #10b981;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+}
+.successWindow p {
+  color: #107f5a;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.signupSidebar {
+  flex: 0 0 40%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupLogo {
+  width: 150px;
+  height: 15}
+
+  .arrowBackBtn {
+    background: none;
+    border: none;
+    color: #374151; /* Dark gray color */
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  .arrowBackBtn:hover {
+    color: #dbf8eebd; /* Green color on hover */
+    background-color: #2c70dfba;
+  }
+  
+  .topBackButton {
+    display: flex;
+    justify-content: flex-start; /* Aligns the content to the left */
+    margin-bottom: 1.5rem;
+  }
+  
+/* Stepper styles */
+.stepper {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stepperItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stepperCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.stepperCircle.active {
+  background: #ff6b00;
+}
+
+.stepperLabel {
+  color: #888;
+  font-weight: 400;
+}
+
+.stepperLabel.active {
+  color: #ff6b00;
+  font-weight: 600;
+}
+
+.stepperLine {
+  width: 32px;
+  height: 2px;
+  background: #e0e0e0;
+}
+  

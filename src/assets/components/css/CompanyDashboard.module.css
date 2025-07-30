@@ -1,0 +1,116 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px 40px; /* Adjusted to 20px top padding for a clean layout */
+  background-color: #f4f6f9;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #244330;
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+.statsGrid {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.statCard h3 {
+  font-size: 20px;
+  color: #0a6a2a;
+}
+
+.statCard p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Add to CompanyDashboard.module.css for new features */
+.appTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.appTable th, .appTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+.appTable th {
+  background: #f8f9fc;
+  font-weight: 600;
+  color: #4e73df;
+}
+.appTable tr:last-child td {
+  border-bottom: none;
+}
+.studentCell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e6ea;
+}
+.statusAccepted {
+  color: #1cc88a;
+  font-weight: 600;
+}
+.statusPending {
+  color: #f6c23e;
+  font-weight: 600;
+}
+.statusRejected {
+  color: #e74a3b;
+  font-weight: 600;
+}
+.tableSection {
+  margin-top: 2.5rem;
+  background: #f8f9fc;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* Responsive improvements */
+@media (max-width: 900px) {
+  .chartsSection {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .tableSection {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,330 @@
+/* AbsentStats SCSS Module */
+
+:root {
+  --primary-dark-blue: #1a237e;
+  --primary-blue: #3f51b5;
+  --light-blue: #7986cb;
+  --accent-teal: #009688;
+  --accent-orange: #ff9800;
+  --success-green: #4caf50;
+  --warning-yellow: #ff9800;
+  --danger-red: #f44336;
+  --info-blue: #2196f3;
+  --card-bg: #ffffff;
+  --dark-text: #333333;
+  --medium-text: #666666;
+  --light-text: #999999;
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  border-left: 4px solid var(--primary-blue);
+  width: 100%;
+  max-width: 100%;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-dark-blue);
+  margin: 0 0 0.5rem 0;
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal));
+    border-radius: 3px;
+  }
+}
+
+.dateRange {
+  font-size: 0.85rem;
+  color: var(--medium-text);
+}
+
+.attendanceRate {
+  position: relative;
+}
+
+.rateCircle {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-teal);
+    opacity: 0.6;
+  }
+}
+
+.rateValue {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark-blue);
+}
+
+.rateLabel {
+  font-size: 0.6rem;
+  color: var(--medium-text);
+  text-align: center;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(33, 150, 243, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all var(--transition-speed) ease;
+  
+  &:hover {
+    background: rgba(33, 150, 243, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  &:nth-child(2) {
+    background: rgba(76, 175, 80, 0.05);
+    
+    &:hover {
+      background: rgba(76, 175, 80, 0.1);
+    }
+  }
+  
+  &:nth-child(3) {
+    background: rgba(244, 67, 54, 0.05);
+    
+    &:hover {
+      background: rgba(244, 67, 54, 0.1);
+    }
+  }
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--medium-text);
+  margin-bottom: 0.5rem;
+}
+
+.value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+.percentage {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50px;
+  margin-top: 0.5rem;
+}
+
+.positive {
+  background-color: rgba(76, 175, 80, 0.15);
+  color: var(--success-green);
+}
+
+.negative {
+  background-color: rgba(244, 67, 54, 0.15);
+  color: var(--danger-red);
+}
+
+.absentListSection {
+  margin-bottom: 1.5rem;
+}
+
+.absentListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin: 0;
+  }
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: var(--primary-blue);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: all var(--transition-speed) ease;
+  
+  &:hover {
+    background: rgba(63, 81, 181, 0.1);
+  }
+}
+
+.absentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.absentStudent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background: rgba(244, 67, 54, 0.05);
+  border-left: 3px solid var(--danger-red);
+  transition: all var(--transition-speed) ease;
+  
+  &:hover {
+    background: rgba(244, 67, 54, 0.1);
+    transform: translateX(5px);
+  }
+}
+
+.studentInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.studentName {
+  font-weight: 500;
+  color: var(--dark-text);
+  margin-bottom: 0.2rem;
+}
+
+.studentReason {
+  font-size: 0.8rem;
+  color: var(--medium-text);
+}
+
+.studentDate {
+  font-size: 0.8rem;
+  color: var(--medium-text);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.noAbsentStudents {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  color: var(--medium-text);
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.viewDetailsBtn {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  box-shadow: 0 4px 10px rgba(63, 81, 181, 0.2);
+  
+  &:hover {
+    background: var(--primary-dark-blue);
+    box-shadow: 0 6px 15px rgba(63, 81, 181, 0.3);
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .attendanceRate {
+    align-self: center;
+    margin-top: 0.5rem;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .absentListHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .absentStudent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .studentDate {
+    align-self: flex-start;
+  }
+}

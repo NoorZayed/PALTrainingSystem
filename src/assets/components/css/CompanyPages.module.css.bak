@@ -1,0 +1,1406 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+   background-color: #f7f9fb;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 20px 40px; /* Adjusted to 20px top padding for a clean layout */
+  background-color: #f4f6f9;
+  overflow-y: auto;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #244330;
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Dashboard, Internships, Requests, Reports, Messages styles remain the same */
+
+
+
+/* ===== Dashboard Styles ===== */
+.statsGrid {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.statCard {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  text-align: center;
+}
+
+.statCard h3 {
+  font-size: 20px;
+  color: #0a6a2a;
+}
+
+.statCard p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* ===== Internships ===== */
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 18px 0 28px 0;
+}
+.internshipListGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 24px;
+}
+.internshipCard {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+.internshipCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+.internshipCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.internshipLocation {
+  font-size: 0.98rem;
+  color: #ff9800;
+  font-weight: 500;
+  background: #fff3e0;
+  border-radius: 6px;
+  padding: 2px 10px;
+}
+.internshipDuration {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* Internship Detail Page Styles */
+.internshipDetailCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.internshipHeader {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.locationBadge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.durationBadge {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.internshipDetails {
+  margin-bottom: 2rem;
+}
+
+.detailRow {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detailLabel {
+  width: 150px;
+  font-weight: 600;
+  color: #555;
+}
+
+.detailValue {
+  flex: 1;
+}
+
+.supervisorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.supervisorEmail {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.actionButtonsRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Internship Detail Page Styles */
+.internshipDetailCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.internshipHeader {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.locationBadge {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.durationBadge {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.internshipDetails {
+  margin-bottom: 2rem;
+}
+
+.detailRow {
+  display: flex;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detailLabel {
+  width: 150px;
+  font-weight: 600;
+  color: #555;
+}
+
+.detailValue {
+  flex: 1;
+}
+
+.supervisorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.supervisorEmail {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.actionButtonsRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+}
+.internshipActionsRow {
+  display: flex;
+  gap: 14px;
+  margin-top: 18px;
+}
+.editButton {
+  background-color: #e3f2fd;
+  color: #1565c0;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.editButton:hover {
+  background-color: #bbdefb;
+}
+.viewButton {
+  background-color: #f3f4f6;
+  color: #4b5563;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.viewButton:hover {
+  background-color: #e5e7eb;
+}
+.deleteButton {
+  background-color: #fef2f2;
+  color: #ef4444;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.deleteButton:hover {
+  background-color: #fee2e2;
+}
+
+/* ===== Requests ===== */
+.requestItem {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #0a6a2a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.requestItem h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.requestItem p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.requestActionsRow {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+}
+
+.cvButtonRightWrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Reports ===== */
+.reportTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+}
+
+.reportTable th,
+.reportTable td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.reportTable th {
+  background-color: #0a6a2a;
+  color: white;
+}
+
+.reportTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* ===== Messages ===== */
+.messageItem {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #1f713b;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+}
+
+.messageItem h4 {
+  margin-bottom: 5px;
+  font-size: 17px;
+  color: #333;
+}
+
+.messageItem p {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+/* Buttons */
+button {
+  background-color: #1f713b;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #34a15d;
+  transform: translateY(-1px);
+}
+
+/* CV Button */
+.cvButton {
+  background: linear-gradient(90deg, #ff9800 60%, #ffb74d 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 18px 10px 14px;
+  font-size: 15px;
+  margin-left: 8px;
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.08);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  outline: none;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.cvButton:hover, .cvButton:focus {
+  background: linear-gradient(90deg, #ffb74d 60%, #ff9800 100%);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(255, 152, 0, 0.13);
+}
+
+.cvButton:active {
+  background: #ff9800;
+  color: #fff;
+}
+
+.cvIcon {
+  font-size: 1.1em;
+  margin-right: 0.3em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.addIcon {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-right: 0.3em;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.modalSmall {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* CV Modal Styles */
+.cvModalSmall {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+.cvModalSmall h2 {
+  text-align: center;
+  color: #244330;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.cvModalSmall p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.cvModalSmall b {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* New styles for internship management UI */
+.headerRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Enhanced styles for internship detail cards */
+.internshipDetailCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.internshipHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+}
+
+.internshipHeader h3 {
+  font-size: 1.5rem;
+  color: #244330;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.locationBadge {
+  font-size: 0.875rem;
+  background: #f0f9ff;
+  color: #0369a1;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+}
+
+.durationBadge {
+  font-size: 0.875rem;
+  background: #f0fdf4;
+  color: #15803d;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 500;
+}
+
+.internshipDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detailRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #f3f4f6;
+}
+
+.detailLabel {
+  font-weight: 600;
+  color: #4b5563;
+  flex-basis: 120px;
+  flex-shrink: 0;
+}
+
+.detailValue {
+  color: #1f2937;
+  flex: 1;
+}
+
+.supervisorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.supervisorEmail {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.actionButtonsRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.backButton {
+  padding: 0.5rem 1rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.backButton:hover {
+  background-color: #e5e7eb;
+}
+
+.editButton {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.editButton:hover {
+  background-color: #1d4ed8;
+}
+
+.deleteButton {
+  padding: 0.5rem 1rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.deleteButton:hover {
+  background-color: #dc2626;
+}
+
+/* Loading and error states */
+.loadingState, .errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #244330;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.errorState h3 {
+  color: #b91c1c;
+  margin-top: 0;
+}
+
+.primaryButton {
+  padding: 0.5rem 1rem;
+  background-color: #244330;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  margin-top: 1rem;
+}
+
+.primaryButton:hover {
+  background-color: #15803d;
+}
+
+/* Form styles */
+.formCard {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.internshipForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.input {
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #244330;
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.2);
+}
+
+.inputError {
+  border-color: #ef4444;
+}
+
+.errorText {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.successMessage {
+  background-color: #dcfce7;
+  color: #166534;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.errorMessage {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 0.375rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.successIcon, .errorIcon {
+  font-weight: bold;
+}
+
+.retryButton {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #b91c1c;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #244330;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: #15803d;
+}
+
+.submitButton:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Internship grid and card styles */
+.internshipGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.internshipCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.internshipCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.cardContent h3 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #244330;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.cardActions {
+  display: flex;
+  border-top: 1px solid #f3f4f6;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+
+.viewButton {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+.viewButton:hover {
+  background-color: #e5e7eb;
+}
+
+.deleteConfirm {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.deleteConfirm span {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.confirmYesButton {
+  padding: 0.25rem 0.5rem;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  font-size: 0.75rem;
+}
+
+.confirmNoButton {
+  padding: 0.25rem 0.5rem;
+  background-color: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  font-size: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .formCard {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .input {
+    font-size: 16px; /* Prevent zoom on mobile */
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .editButton,
+  .viewButton,
+  .deleteButton {
+    width: 100%;
+  }
+
+  .modalSmall {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .modalActions button {
+    width: 100%;
+  }
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 1rem;
+  color: #6b7280;
+}
+
+.loadingState p {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Empty State */
+.emptyState {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.emptyState h3 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.emptyState p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Search Styles */
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.searchWrapper {
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  padding-right: 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #d87818;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.clearSearch {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.clearSearch:hover {
+  color: #4b5563;
+  background-color: #f3f4f6;
+}
+
+/* Card Styles */
+.cardContent h3 {
+  font-size: 1.125rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.cardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e7eb;
+}
+/* --- Add/Edit Supervisor Section --- */
+.add-edit-supervisor-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Softer shadow */
+  padding: 2rem; /* Consistent padding */
+  margin-bottom: 2rem;
+}
+
+.add-edit-supervisor-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b; /* Darker title */
+  margin-bottom: 1.5rem;
+}
+
+.add-edit-supervisor-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-edit-input {
+  width: 100%; /* Full width within grid cell */
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem; /* Rounded corners */
+  font-size: 1rem;
+  color: #374151;
+  background-color: #f9fafb;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.add-edit-input:focus {
+  outline: none;
+  border-color: #6366f1; /* Focused border color */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25); /* Subtle focus shadow */
+}
+
+.add-edit-supervisor-buttons {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-start; /* Align buttons to the left */
+}
+
+.add-edit-action-button {
+  background-color: #166903;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.add-edit-action-button:hover {
+  background-color: #06ad16; /* Darker shade on hover */
+}
+
+.add-edit-cancel-button {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.add-edit-cancel-button:hover {
+  background-color: #d1d5db;
+}
+
+/* --- Existing Supervisors Section --- */
+
+.existing-supervisors-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.supervisors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.no-supervisors {
+  color: #9ca3af;
+  font-style: italic;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.supervisor-item {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Subtle shadow */
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.supervisor-item:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Slightly raised on hover */
+}
+
+.supervisor-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.supervisor-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.supervisor-email {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.supervisor-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.supervisor-edit-button,
+.supervisor-delete-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: opacity 0.15s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.supervisor-edit-button {
+  background-color: #f59e0b;
+  color: #ffffff;
+}
+
+.supervisor-edit-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.supervisor-delete-button {
+  background-color: #dc2626;
+  color: #ffffff;
+}
+
+.supervisor-delete-button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* assign section */
+.assign-supervisors-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  margin-bottom: 7rem;
+}
+
+.assign-supervisors-section h3 {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.select-internship-container {
+  margin-bottom: 1.5rem;
+}
+
+.select-internship-container label,
+.select-supervisor-container label,
+.select-cosupervisor-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.select-internship-container select,
+.select-supervisor-container select,
+.select-cosupervisor-container select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  background-color: #f9fafb;
+  color: #374151;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+}
+
+.select-internship-container select:focus,
+.select-supervisor-container select:focus,
+.select-cosupervisor-container select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.supervisor-select-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.assign-button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.assign-button:hover {
+  background-color: #4338ca;
+}
+
+.assigned-supervisors-display {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: #f9fafb;
+  border-radius: 0.375rem;
+  border: 1px solid #e5e7eb;
+}
+
+.assigned-supervisors-display h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.assigned-supervisors-display p {
+  margin-bottom: 0.25rem;
+}
+
+.assigned-supervisors-display p:last-child {
+  margin-bottom: 0; /* Remove bottom margin from last paragraph */
+}
+
+.no-assigned-supervisors {
+  color: #6b7280;
+}
+
+/* Improved form styles */
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row .formGroup {
+  flex: 1;
+}
+
+/* Card improvements */
+.cardContent {
+  margin-bottom: 1rem;
+}
+
+.internshipGrid .internshipCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.internshipGrid .internshipCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Loading state animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+.loadingState .spinner {
+  animation: spin 1s linear infinite, pulse 2s ease infinite;
+}
+
+/* Make error and success messages more visible */
+.errorMessage, .successMessage {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

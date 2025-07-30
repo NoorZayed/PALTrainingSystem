@@ -1,0 +1,141 @@
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #2d3436;
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #f1f2f6;
+  margin: 0 0 1.5rem 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1.5rem;
+}
+
+.table th {
+  text-align: left;
+  padding: 1rem;
+  color: #636e72;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #f1f2f6;
+}
+
+.table td {
+  padding: 1rem;
+  color: #2d3436;
+  border-bottom: 1px solid #f1f2f6;
+  font-size: 0.95rem;
+}
+
+.table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.active {
+  background: #e3fcef;
+  color: #00b894;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.inactive {
+  background: #ffe3e3;
+  color: #d63031;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.prevBtn, .modifyBtn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 0.5rem;
+}
+
+.prevBtn {
+  background: #e3f2fd;
+  color: #0984e3;
+}
+
+.modifyBtn {
+  background: #f1f2f6;
+  color: #2d3436;
+}
+
+.prevBtn:hover {
+  background: #bbdefb;
+}
+
+.modifyBtn:hover {
+  background: #dfe6e9;
+}
+
+.showMore {
+  width: 100%;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  color: #636e72;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.showMore:hover {
+  background: #f1f2f6;
+  color: #2d3436;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.showMore {
+  text-align: center;
+  margin-top: 20px; /* Reduced margin-top */
+}
+
+.showMore:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.showMore:disabled:hover {
+  background-color: #ccc;
+}
+
+.prevBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.modifyBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

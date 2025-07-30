@@ -1,0 +1,171 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.profileHeader {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+.profileHeader h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.profileHeader p {
+  color: #7f8c8d;
+  font-size: 1rem;
+}
+
+.formContainer {
+  max-width: 600px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.updateButton {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.updateButton:hover {
+  background-color: #2980b9;
+}
+
+.updateButton:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.notification {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  animation: fadeOut 3s forwards;
+  animation-delay: 3s;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Password strength meter */
+.passwordStrengthMeter {
+  margin-top: 0.5rem;
+  height: 5px;
+  border-radius: 3px;
+  background-color: #ecf0f1;
+  overflow: hidden;
+}
+
+.passwordStrength {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.weak {
+  background-color: #e74c3c;
+  width: 33%;
+}
+
+.medium {
+  background-color: #f39c12;
+  width: 66%;
+}
+
+.strong {
+  background-color: #2ecc71;
+  width: 100%;
+}
+
+.strengthText {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+
+.spinner {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
